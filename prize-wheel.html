@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prize Wheel — Free Online Spinner for Giveaways</title>
+  <meta name="description" content="Free prize wheel spinner for giveaways and events. Enter your prizes, spin the wheel, and pick a winner randomly. Perfect for raffles and parties.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prize Wheel — Free Online Spinner">
+  <meta property="og:description" content="Enter your prizes, spin the wheel, and pick a winner randomly. Perfect for raffles and parties.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/prize-wheel">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Prize Wheel","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free prize wheel spinner for giveaways and events. Enter your prizes, spin the wheel, and pick a winner randomly."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use this for a company raffle?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter all employee names, project the wheel on a big screen, and spin to select winners. The process is visible to everyone."}},{"@type":"Question","name":"Can I pick multiple winners?","acceptedAnswer":{"@type":"Answer","text":"Yes. After each spin, remove the winner from the wheel and spin again. This ensures no one wins twice."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/random-picker-wheel">Picker Wheel</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Prize Wheel — Free Online Spinner</h1>
+        <canvas id="wheel-canvas" aria-label="Prize wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+      <div class="input-panel">
+        <p class="panel-title">Enter prizes or participants</p>
+        <textarea id="options-input" placeholder="Enter prizes or names (one per line)&#10;Example:&#10;$100 Gift Card&#10;Free Lunch&#10;Movie Tickets" aria-label="Prize input"></textarea>
+        <div class="input-meta"><span id="option-count">0 options</span><span>Max 100</span></div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin the Prize Wheel</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle prizes">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Pick a Winner with a Spinning Prize Wheel</h2>
+      <p>Enter your prizes or participants, spin the wheel, and select a winner randomly. Great for company events, holiday parties, and online giveaways.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Make Your Giveaway Fun and Fair</h2>
+      <div class="use-cases">
+        <div class="use-case"><h3>Up to 100 entries</h3><p>Enter prizes or participant names.</p></div>
+        <div class="use-case"><h3>Big screen ready</h3><p>Use fullscreen mode for events.</p></div>
+        <div class="use-case"><h3>Transparent &amp; fair</h3><p>Everyone watches the spin live.</p></div>
+        <div class="use-case"><h3>Multiple winners</h3><p>Remove winners and spin again.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>More Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/">Spin the Wheel →</a>
+        <a class="link-card" href="/random-picker-wheel">Random Picker Wheel →</a>
+        <a class="link-card" href="/wheel-of-names">Wheel of Names →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I use this for a company raffle?</summary><p>Yes. Enter all employee names, project the wheel on a big screen, and spin to select winners. The process is visible to everyone.</p></details>
+        <details class="faq-item"><summary>Can I pick multiple winners?</summary><p>Yes. After each spin, remove the winner from the wheel and spin again. This ensures no one wins twice.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Prize Wheel — free online spinner for giveaways and events. Enter prizes, spin the wheel, and pick a winner.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'prize', storageKey: 'stw-prize', pageName: 'Prize Wheel' });
+  </script>
+</body>
+</html>

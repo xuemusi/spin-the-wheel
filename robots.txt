@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://spin-the-wheel.pages.dev/sitemap.xml

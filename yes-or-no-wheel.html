@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yes or No Wheel — Free Decision Maker Online</title>
+  <meta name="description" content="Can't decide? Spin the Yes or No wheel for a random answer. Free decision maker — no signup. Get a yes, no, or maybe answer instantly.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yes or No Wheel — Free Decision Maker">
+  <meta property="og:description" content="Spin the Yes or No wheel for a random answer. Free, no signup required.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/yes-or-no-wheel">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Yes or No Wheel","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Spin the Yes or No wheel for a random answer. Free decision maker — no signup."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the yes or no answer really random?","acceptedAnswer":{"@type":"Answer","text":"Yes. The wheel uses true random selection, giving Yes, No, and Maybe an equal chance."}},{"@type":"Question","name":"Can I customize the options?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can change the wheel to only Yes and No, or add your own custom options like Ask Again or Flip a Coin."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/">Spin the Wheel</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Yes or No Wheel — Free Decision Maker</h1>
+        <canvas id="wheel-canvas" aria-label="Yes or No wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+      <div class="input-panel">
+        <p class="panel-title">Your options (edit if you want)</p>
+        <textarea id="options-input" aria-label="Options input">Yes
+No
+Maybe</textarea>
+        <div class="input-meta"><span id="option-count">3 options</span><span>Edit to customize</span></div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin for Answer</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Let the Wheel Decide for You</h2>
+      <p>Stuck on a decision? Spin the Yes or No wheel and let chance make the call. Simple, fun, and surprisingly satisfying.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Think of your question</h3><p>Any yes-or-no question works.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Spin the wheel</h3><p>Click the wheel or the Spin button.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Get your answer</h3><p>Yes, No, or Maybe — the wheel decides.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Spin again if needed</h3><p>Not happy with the result? Spin again.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>More Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/">Spin the Wheel →</a>
+        <a class="link-card" href="/random-picker-wheel">Random Picker Wheel →</a>
+        <a class="link-card" href="/prize-wheel">Prize Wheel →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is the yes or no answer really random?</summary><p>Yes. The wheel uses true random selection, giving Yes, No, and Maybe an equal chance.</p></details>
+        <details class="faq-item"><summary>Can I customize the options?</summary><p>Yes. You can change the wheel to only Yes and No, or add your own custom options like "Ask Again" or "Flip a Coin."</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Yes or No Wheel — free decision maker. Spin the wheel for a random yes or no answer.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'yesno', defaultOptions: ['Yes', 'No', 'Maybe'], storageKey: 'stw-yesno', pageName: 'Yes or No Wheel' });
+  </script>
+</body>
+</html>

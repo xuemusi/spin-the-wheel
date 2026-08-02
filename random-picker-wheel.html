@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Picker Wheel — Custom Spin Wheel Online</title>
+  <meta name="description" content="Free random picker wheel. Add your custom options, spin the wheel, and get a random result. Customize colors, themes, and entries. No signup.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Random Picker Wheel — Custom Spin Wheel">
+  <meta property="og:description" content="Add your custom options, spin the wheel, and get a random result. No signup required.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/random-picker-wheel">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Random Picker Wheel","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free random picker wheel. Add your custom options, spin the wheel, and get a random result."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use this for a giveaway?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter your participants, spin the wheel, and display the winner. The spinning animation makes the drawing fun and transparent."}},{"@type":"Question","name":"Can I remove the winner and spin again?","acceptedAnswer":{"@type":"Answer","text":"Yes. After each spin, you can remove the selected option and spin again to pick multiple winners without duplicates."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/prize-wheel">Prize Wheel</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Random Picker Wheel — Custom Spin Wheel</h1>
+        <canvas id="wheel-canvas" aria-label="Picker wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+      <div class="input-panel">
+        <p class="panel-title">Add your custom options</p>
+        <textarea id="options-input" placeholder="Enter anything — numbers, words, choices, names&#10;One per line" aria-label="Custom options input"></textarea>
+        <div class="input-meta"><span id="option-count">0 options</span><span>Max 100</span></div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin the Wheel</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle options">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Build Your Own Random Picker</h2>
+      <p>Add any options you want to the wheel — numbers, words, names, choices — then spin for a random result. Customize colors, remove winners, and spin again for multiple picks.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Customize Your Wheel</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Add up to 100 options</h3><p>Any text, one per line.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Shuffle entries</h3><p>Randomize the order before spinning.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Remove winners</h3><p>Pick multiple unique results.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Full-screen mode</h3><p>Use your browser's fullscreen for presentations.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>More Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/prize-wheel">Prize Wheel →</a>
+        <a class="link-card" href="/">Spin the Wheel →</a>
+        <a class="link-card" href="/yes-or-no-wheel">Yes or No Wheel →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I use this for a giveaway?</summary><p>Yes. Enter your participants, spin the wheel, and display the winner. The spinning animation makes the drawing fun and transparent.</p></details>
+        <details class="faq-item"><summary>Can I remove the winner and spin again?</summary><p>Yes. After each spin, you can remove the selected option and spin again to pick multiple winners without duplicates.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Random Picker Wheel — free custom spin wheel. Add your options, spin, and get a random result.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'custom', storageKey: 'stw-rpw', pageName: 'Random Picker Wheel' });
+  </script>
+</body>
+</html>

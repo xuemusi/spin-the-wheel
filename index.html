@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spin the Wheel — Free Random Picker &amp; Decision Wheel</title>
+  <meta name="description" content="Free spin the wheel tool. Enter your choices, spin the wheel, and get a random result instantly. No signup required. Perfect for classrooms, raffles, and decisions.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spin the Wheel — Free Random Picker">
+  <meta property="og:description" content="Enter your choices, spin the wheel, and get a random result instantly. No signup required.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Spin the Wheel","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free spin the wheel tool. Enter your choices, spin the wheel, and get a random result instantly."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the spin the wheel really random?","acceptedAnswer":{"@type":"Answer","text":"Yes. We use your browser's built-in crypto random number generator to ensure every option has an equal probability of being selected."}},{"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No. Spin the Wheel is completely free to use with no signup required. Just visit the page and start spinning."}},{"@type":"Question","name":"How many options can I add?","acceptedAnswer":{"@type":"Answer","text":"You can add up to 100 options per wheel in the free version. Each option appears as a colored section on the wheel."}},{"@type":"Question","name":"Does it work on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. The wheel is fully responsive and works on phones, tablets, and desktops with touch and click support."}},{"@type":"Question","name":"Can I share my wheel results?","acceptedAnswer":{"@type":"Answer","text":"Yes. After spinning, you can take a screenshot of the result to share with your class, team, or friends."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/wheel-of-names">Wheel of Names</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Spin the Wheel — Free Random Picker</h1>
+        <canvas id="wheel-canvas" aria-label="Spinning wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+
+      <div class="input-panel">
+        <p class="panel-title">Enter your options</p>
+        <textarea id="options-input" placeholder="Enter one option per line&#10;Example:&#10;Pizza&#10;Burger&#10;Sushi" aria-label="Options input"></textarea>
+        <div class="input-meta">
+          <span id="option-count">0 options</span>
+          <span>Max 100</span>
+        </div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin the Wheel</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle options">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Make a Fair Random Choice in Seconds</h2>
+      <p>Enter your options, spin the wheel, and let chance decide. No signup, no download, no limits. Use it for classrooms, giveaways, team picks, or any time you need a fair random choice.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Type your options</h3><p>Enter each choice on a new line in the box above.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Click to spin</h3><p>Hit the Spin button or click directly on the wheel.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Get your result</h3><p>The wheel stops on a random option — that's your winner.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Share or spin again</h3><p>Screenshot the result to share, or spin again for another pick.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Popular Uses</h2>
+      <div class="use-cases">
+        <div class="use-case"><h3>Classroom Name Picker</h3><p>Teachers call on students fairly with the wheel.</p></div>
+        <div class="use-case"><h3>Raffle &amp; Giveaway</h3><p>Pick a winner everyone can see on the big screen.</p></div>
+        <div class="use-case"><h3>Decision Maker</h3><p>Can't decide? Let the wheel choose for you.</p></div>
+        <div class="use-case"><h3>Team Selector</h3><p>Split players into teams randomly and fairly.</p></div>
+        <div class="use-case"><h3>Game Night</h3><p>Assign tasks or turns without arguments.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Other Wheels You Might Like</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/wheel-of-names">Wheel of Names →</a>
+        <a class="link-card" href="/random-name-picker">Random Name Picker →</a>
+        <a class="link-card" href="/yes-or-no-wheel">Yes or No Wheel →</a>
+        <a class="link-card" href="/random-picker-wheel">Random Picker Wheel →</a>
+        <a class="link-card" href="/prize-wheel">Prize Wheel →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is the spin the wheel really random?</summary><p>Yes. We use your browser's built-in crypto random number generator to ensure every option has an equal probability of being selected.</p></details>
+        <details class="faq-item"><summary>Do I need to create an account?</summary><p>No. Spin the Wheel is completely free to use with no signup required. Just visit the page and start spinning.</p></details>
+        <details class="faq-item"><summary>How many options can I add?</summary><p>You can add up to 100 options per wheel in the free version. Each option appears as a colored section on the wheel.</p></details>
+        <details class="faq-item"><summary>Does it work on my phone?</summary><p>Yes. The wheel is fully responsive and works on phones, tablets, and desktops with touch and click support.</p></details>
+        <details class="faq-item"><summary>Can I share my wheel results?</summary><p>Yes. After spinning, you can take a screenshot of the result to share with your class, team, or friends.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Spin the Wheel is a free online random picker. Enter your options, spin the wheel, and get a random result. No signup required.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'custom', storageKey: 'stw-main', pageName: 'Spin the Wheel' });
+  </script>
+</body>
+</html>

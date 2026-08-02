@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wheel of Names — Free Random Name Picker Online</title>
+  <meta name="description" content="Free wheel of names picker. Enter names, spin the wheel, and pick a random person fairly. Great for classrooms, raffles, and team selection. No signup.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wheel of Names — Free Random Name Picker">
+  <meta property="og:description" content="Enter names, spin the wheel, and pick a random person fairly. No signup required.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/wheel-of-names">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Wheel of Names","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free wheel of names picker. Enter names, spin the wheel, and pick a random person fairly."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I pick multiple names?","acceptedAnswer":{"@type":"Answer","text":"Yes. After each spin, the selected name is removed from the wheel. Spin again to pick the next person. This ensures no one is picked twice."}},{"@type":"Question","name":"Can I save my class list?","acceptedAnswer":{"@type":"Answer","text":"Your name list is automatically saved in your browser. When you return, your list will be there. Clear your browser data to reset."}},{"@type":"Question","name":"How many names can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 100 names in the free version. For most classrooms and raffles, this is more than enough."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/random-name-picker">Name Picker</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Wheel of Names — Free Random Name Picker</h1>
+        <canvas id="wheel-canvas" aria-label="Name wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+      <div class="input-panel">
+        <p class="panel-title">Enter names (one per line)</p>
+        <textarea id="options-input" placeholder="Type or paste names here&#10;Example:&#10;Alice&#10;Bob&#10;Charlie" aria-label="Names input"></textarea>
+        <div class="input-meta"><span id="option-count">0 options</span><span>Max 100</span></div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin the Wheel</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle names">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Pick a Name Fairly with a Spinning Wheel</h2>
+      <p>Paste your list of names, spin the wheel, and select a random person in seconds. Perfect for teachers calling on students, raffle drawings, and team selection.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Use the Wheel of Names</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Type or paste names</h3><p>Enter each name on a new line.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Click Spin</h3><p>The wheel starts spinning with a random result.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Get a name</h3><p>The wheel lands on a random person — your pick.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Remove &amp; spin again</h3><p>Remove the winner and spin for multiple unique picks.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Perfect for Classrooms</h2>
+      <p>Teachers love the wheel of names for fair classroom participation. Every student gets an equal chance — no favoritism, no repeats. Project the wheel on your screen and let students watch the spin.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Other Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/random-name-picker">Random Name Picker →</a>
+        <a class="link-card" href="/">Spin the Wheel →</a>
+        <a class="link-card" href="/yes-or-no-wheel">Yes or No Wheel →</a>
+        <a class="link-card" href="/prize-wheel">Prize Wheel →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I pick multiple names?</summary><p>Yes. After each spin, the selected name is removed from the wheel. Spin again to pick the next person. This ensures no one is picked twice.</p></details>
+        <details class="faq-item"><summary>Can I save my class list?</summary><p>Your name list is automatically saved in your browser. When you return, your list will be there. Clear your browser data to reset.</p></details>
+        <details class="faq-item"><summary>How many names can I add?</summary><p>Up to 100 names in the free version. For most classrooms and raffles, this is more than enough.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Wheel of Names — free online random name picker. Enter names, spin the wheel, and pick a random person fairly.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'names', storageKey: 'stw-names', pageName: 'Wheel of Names' });
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Name Picker — Free Online Selection Tool</title>
+  <meta name="description" content="Free random name picker. Spin the wheel to select a name from your list randomly. No signup, works on any device. Great for classrooms and giveaways.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Random Name Picker — Free Online Tool">
+  <meta property="og:description" content="Spin the wheel to select a name from your list randomly. No signup required.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel.pages.dev/random-name-picker">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Random Name Picker","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free random name picker. Spin the wheel to select a name from your list randomly."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the name picker truly random?","acceptedAnswer":{"@type":"Answer","text":"Yes. We use the browser's crypto random number generator, giving every name an exactly equal probability of being selected."}},{"@type":"Question","name":"Can I use this for a raffle?","acceptedAnswer":{"@type":"Answer","text":"Yes. The spinning wheel makes raffle drawings fun and transparent. Enter all participant names, spin, and display the winner."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/wheel-of-names">Wheel of Names</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Random Name Picker — Free Online Tool</h1>
+        <canvas id="wheel-canvas" aria-label="Name picker wheel. Click to spin." role="img"></canvas>
+        <div id="result-display" aria-live="polite"></div>
+      </div>
+      <div class="input-panel">
+        <p class="panel-title">Enter names to pick from</p>
+        <textarea id="options-input" placeholder="Paste your names here (one per line)&#10;Example:&#10;Sarah&#10;Mike&#10;Emma" aria-label="Names input"></textarea>
+        <div class="input-meta"><span id="option-count">0 options</span><span>Max 100</span></div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Pick a Name</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle names">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Ad space</div>
+
+    <section class="content-section">
+      <h2>Select a Random Name Instantly</h2>
+      <p>Enter your list of names and spin the wheel to pick one at random. Whether you're selecting a student, choosing a raffle winner, or picking teams, our random name picker makes it fair and fun.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Fair Selection Every Time</h2>
+      <p>The wheel gives every name an equal chance. The result is transparent — everyone watches the spin and sees the outcome. No more questions about whether the selection was fair.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Other Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/wheel-of-names">Wheel of Names →</a>
+        <a class="link-card" href="/">Spin the Wheel →</a>
+        <a class="link-card" href="/yes-or-no-wheel">Yes or No Wheel →</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is the name picker truly random?</summary><p>Yes. We use the browser's crypto random number generator, giving every name an exactly equal probability of being selected.</p></details>
+        <details class="faq-item"><summary>Can I use this for a raffle?</summary><p>Yes. The spinning wheel makes raffle drawings fun and transparent. Enter all participant names, spin, and display the winner.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav><a href="/about">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Random Name Picker — free online selection tool. Spin the wheel to pick a name randomly.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    initWheelPage({ mode: 'names', storageKey: 'stw-rnp', pageName: 'Random Name Picker' });
+  </script>
+</body>
+</html>

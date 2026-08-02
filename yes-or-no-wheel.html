@@ -11,7 +11,8 @@
   <meta property="og:title" content="Yes or No Wheel — Free Decision Maker">
   <meta property="og:description" content="Spin the Yes or No wheel for a random answer. Free, no signup required.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://spin-the-wheel.pages.dev/yes-or-no-wheel">
+  <link rel="canonical" href="https://spin-the-wheel-axn.pages.dev/yes-or-no-wheel">
+  <meta property="og:url" content="https://spin-the-wheel-axn.pages.dev/yes-or-no-wheel">
   <link rel="stylesheet" href="/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,8 +32,12 @@
   <main>
     <section class="tool-section" id="tool">
       <div class="wheel-container">
-        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Yes or No Wheel — Free Decision Maker</h1>
-        <canvas id="wheel-canvas" aria-label="Yes or No wheel. Click to spin." role="img"></canvas>
+        <span class="hero-eyebrow">✅ Decision Maker</span>
+        <h1 class="hero-title">Yes or No Wheel</h1>
+        <p class="hero-subtitle">Can't decide? Spin the wheel for a random Yes, No, or Maybe answer.</p>
+        <div class="wheel-wrapper">
+          <canvas id="wheel-canvas" aria-label="Yes or No wheel. Click to spin." role="img"></canvas>
+        </div>
         <div id="result-display" aria-live="polite"></div>
       </div>
       <div class="input-panel">

@@ -11,7 +11,8 @@
   <meta property="og:title" content="Prize Wheel — Free Online Spinner">
   <meta property="og:description" content="Enter your prizes, spin the wheel, and pick a winner randomly. Perfect for raffles and parties.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://spin-the-wheel.pages.dev/prize-wheel">
+  <link rel="canonical" href="https://spin-the-wheel-axn.pages.dev/prize-wheel">
+  <meta property="og:url" content="https://spin-the-wheel-axn.pages.dev/prize-wheel">
   <link rel="stylesheet" href="/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,8 +32,12 @@
   <main>
     <section class="tool-section" id="tool">
       <div class="wheel-container">
-        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Prize Wheel — Free Online Spinner</h1>
-        <canvas id="wheel-canvas" aria-label="Prize wheel. Click to spin." role="img"></canvas>
+        <span class="hero-eyebrow">🎁 Giveaway Spinner</span>
+        <h1 class="hero-title">Prize Wheel</h1>
+        <p class="hero-subtitle">Enter your prizes or participants, spin the wheel, and pick a winner randomly.</p>
+        <div class="wheel-wrapper">
+          <canvas id="wheel-canvas" aria-label="Prize wheel. Click to spin." role="img"></canvas>
+        </div>
         <div id="result-display" aria-live="polite"></div>
       </div>
       <div class="input-panel">

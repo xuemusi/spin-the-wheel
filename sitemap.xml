@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://spin-the-wheel.pages.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/wheel-of-names</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/random-name-picker</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/yes-or-no-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/random-picker-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/prize-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/about</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://spin-the-wheel.pages.dev/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/wheel-of-names</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/random-name-picker</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/yes-or-no-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/random-picker-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/prize-wheel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/about</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://spin-the-wheel-axn.pages.dev/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

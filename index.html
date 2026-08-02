@@ -11,7 +11,8 @@
   <meta property="og:title" content="Spin the Wheel — Free Random Picker">
   <meta property="og:description" content="Enter your choices, spin the wheel, and get a random result instantly. No signup required.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://spin-the-wheel.pages.dev/">
+  <link rel="canonical" href="https://spin-the-wheel-axn.pages.dev/">
+  <meta property="og:url" content="https://spin-the-wheel-axn.pages.dev/">
   <link rel="stylesheet" href="/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,8 +32,12 @@
   <main>
     <section class="tool-section" id="tool">
       <div class="wheel-container">
-        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Spin the Wheel — Free Random Picker</h1>
-        <canvas id="wheel-canvas" aria-label="Spinning wheel. Click to spin." role="img"></canvas>
+        <span class="hero-eyebrow">🎲 Free Online Tool</span>
+        <h1 class="hero-title">Spin the Wheel</h1>
+        <p class="hero-subtitle">Enter your options, spin the wheel, and get a random result instantly. No signup required.</p>
+        <div class="wheel-wrapper">
+          <canvas id="wheel-canvas" aria-label="Spinning wheel. Click to spin." role="img"></canvas>
+        </div>
         <div id="result-display" aria-live="polite"></div>
       </div>
 

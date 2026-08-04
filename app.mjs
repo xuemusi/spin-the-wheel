@@ -276,18 +276,18 @@ class SpinWheel {
     if (!toast) {
       toast = document.createElement('div');
       toast.className = 'wheel-toast';
-      toast.style.cssText = `
-        position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-        background: #1e293b; color: #fff; padding: 12px 24px;
-        border-radius: 12px; font-size: 14px; z-index: 9999;
-        transition: opacity 0.3s; opacity: 0;
-      `;
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
-    toast.style.opacity = '1';
+    // Force reflow so re-triggering the same message replays the animation
+    void toast.offsetWidth;
+    toast.classList.add('show');
     clearTimeout(toast._timer);
-    toast._timer = setTimeout(() => { toast.style.opacity = '0'; }, 2000);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2400);
   }
 }
 

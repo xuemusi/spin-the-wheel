@@ -6,7 +6,7 @@
   <title>Yes or No Wheel — Free Instant Decision Maker</title>
   <meta name="description" content="Free Yes or No wheel spinner. Spin for an instant random yes or no answer to resolve debates and decisions in seconds.">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#090d16">
+  <meta name="theme-color" content="#07080c">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yes or No Wheel — Free Instant Decision Maker">
   <meta property="og:description" content="Free Yes or No wheel spinner. Spin for an instant random yes or no answer to resolve debates and decisions in seconds.">
@@ -31,7 +31,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
       </div>
       <span class="brand-name">Spin the Wheel</span>
-      <span class="brand-badge">PRO RNG</span>
     </a>
     <nav class="header-nav" aria-label="Primary Navigation">
       <a href="/" >Studio</a>
@@ -43,40 +42,48 @@
   </header>
 
   <main class="main-wrapper">
+    <!-- Studio Hero Header Banner (Direct on page, unframed) -->
+    <section class="studio-hero-banner">
+      <span class="hero-badge">⚖️ Quick 50/50 Decider</span>
+      <h1 class="hero-title">Yes or No Wheel</h1>
+      <p class="hero-subtitle">Stuck in analysis paralysis? Spin the wheel for a fast, random Yes, No, or Maybe answer.</p>
+    </section>
+
     <!-- Main Interactive Studio Stage -->
     <section class="studio-stage" id="tool">
-      <!-- Left Column: Wheel Canvas & Controls -->
-      <div class="wheel-arena-card">
-        <span class="hero-badge">⚖️ Quick 50/50 Decider</span>
-        <h1 class="hero-title">Yes or No Wheel</h1>
-        <p class="hero-subtitle">Stuck in analysis paralysis? Spin the wheel for a fast, random Yes, No, or Maybe answer.</p>
+      <!-- Left Column: Wheel Canvas & Controls Dock -->
+      <div class="wheel-stage-container">
+        <!-- Studio Floating Dock / Controls Toolbar -->
+        <div class="studio-dock" role="toolbar" aria-label="Wheel Settings Toolbar">
+          <div class="dock-group">
+            <div class="segmented-control" role="group" aria-label="Spin Speed">
+              <button class="speed-pill-btn" type="button" data-speed="3000">3s</button>
+              <button class="speed-pill-btn active" type="button" data-speed="5000">5s</button>
+              <button class="speed-pill-btn" type="button" data-speed="8000">8s</button>
+            </div>
+          </div>
 
-        <!-- Studio Control Toolbar -->
-        <div class="studio-toolbar" role="toolbar" aria-label="Wheel Settings Toolbar">
-          <button class="tool-btn active" id="sound-toggle-btn" type="button" title="Toggle Sound FX">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-            <span>Sound On</span>
-          </button>
+          <div class="dock-group">
+            <div class="palette-swatches-group" role="group" aria-label="Color Themes">
+              <button class="palette-swatch-btn palette-swatch-btn-vibrant active" type="button" data-palette="vibrant" title="Vibrant Studio" aria-label="Vibrant Theme"></button>
+              <button class="palette-swatch-btn palette-swatch-btn-cyber" type="button" data-palette="cyber" title="Cyberpunk Neon" aria-label="Cyberpunk Theme"></button>
+              <button class="palette-swatch-btn palette-swatch-btn-sunset" type="button" data-palette="sunset" title="Sunset Flame" aria-label="Sunset Theme"></button>
+              <button class="palette-swatch-btn palette-swatch-btn-emerald" type="button" data-palette="emerald" title="Emerald Royale" aria-label="Emerald Theme"></button>
+              <button class="palette-swatch-btn palette-swatch-btn-ocean" type="button" data-palette="ocean" title="Ocean Azure" aria-label="Ocean Theme"></button>
+              <button class="palette-swatch-btn palette-swatch-btn-pastel" type="button" data-palette="pastel" title="Holo Pastel" aria-label="Pastel Theme"></button>
+            </div>
+          </div>
 
-          <select class="tool-select" id="speed-select" aria-label="Spin Duration Speed">
-            <option value="3000">⚡ 3s Fast</option>
-            <option value="5000" selected>⏱️ 5s Normal</option>
-            <option value="8000">🔥 8s Epic</option>
-          </select>
-
-          <select class="tool-select" id="palette-select" aria-label="Color Palette">
-            <option value="rainbow" selected>🌈 Rainbow</option>
-            <option value="cyber">⚡ Cyber Neon</option>
-            <option value="sunset">🌅 Sunset Glow</option>
-            <option value="emerald">💎 Emerald Gold</option>
-            <option value="ocean">🌊 Electric Ocean</option>
-            <option value="pastel">🍬 Candy Pastel</option>
-          </select>
-
-          <button class="tool-btn" id="fullscreen-btn" type="button" title="Toggle Fullscreen Mode">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
-            <span>Fullscreen</span>
-          </button>
+          <div class="dock-group">
+            <button class="dock-icon-btn active" id="sound-toggle-btn" type="button" title="Toggle Sound FX">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+              <span>Sound</span>
+            </button>
+            <button class="dock-icon-btn" id="fullscreen-btn" type="button" title="Toggle Fullscreen Mode">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+              <span>Full</span>
+            </button>
+          </div>
         </div>
 
         <!-- The Canvas Wheel Frame -->
@@ -84,35 +91,47 @@
           <canvas id="wheel-canvas" aria-label="Yes or No Wheel Interactive Wheel. Click or press space to spin." role="img"></canvas>
         </div>
 
-        <!-- Hero Spin CTA -->
-        <div class="wheel-quick-actions">
+        <!-- Tactile Hero Spin CTA -->
+        <div class="wheel-cta-container">
           <button class="btn-spin-hero" id="spin-btn-hero" type="button" aria-label="Spin the Wheel Now">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
             <span class="btn-label">SPIN THE WHEEL</span>
             <kbd>Space</kbd>
           </button>
         </div>
       </div>
 
-      <!-- Right Column: Studio Options Editor & History Panel -->
-      <aside class="studio-panel">
-        <div class="panel-tabs" role="tablist">
-          <button class="panel-tab active" id="tab-editor" role="tab" aria-selected="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            <span>Editor</span>
-            <span class="panel-tab-badge" id="option-count-badge">6</span>
+      <!-- Right Column: Studio Control Console -->
+      <aside class="studio-console">
+        <!-- Console Header Tabs -->
+        <div class="console-tabs" role="tablist">
+          <button class="console-tab active" id="tab-choices" role="tab" aria-selected="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <span>Choices</span>
+            <span class="console-tab-badge" id="option-count-badge">6</span>
           </button>
-          <button class="panel-tab" id="tab-history" role="tab" aria-selected="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l4 2"/></svg>
-            <span>Winners Log</span>
-            <span class="panel-tab-badge" id="history-count-badge">0</span>
+          <button class="console-tab" id="tab-presets" role="tab" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Presets</span>
+          </button>
+          <button class="console-tab" id="tab-history" role="tab" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l4 2"/></svg>
+            <span>Winners</span>
+            <span class="console-tab-badge" id="history-count-badge">0</span>
           </button>
         </div>
 
-        <!-- Editor Tab View -->
-        <div class="panel-body" id="view-editor">
-          <div class="editor-action-bar">
-            <div class="action-btn-group">
+        <!-- Choices Tab View -->
+        <div class="console-body" id="view-choices">
+          <!-- Quick Add Row -->
+          <div class="quick-add-group">
+            <input class="quick-add-input" id="quick-add-input" type="text" placeholder="Type choice name and hit Enter..." aria-label="Add choice">
+            <button class="quick-add-btn" id="quick-add-btn" type="button">+ Add</button>
+          </div>
+
+          <!-- Actions Bar -->
+          <div class="console-action-bar">
+            <div class="dock-group">
               <button class="btn-action" id="shuffle-btn" type="button" title="Shuffle order randomly">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.4c1.3 0 2.5.6 3.3 1.7l6.1 8.6c.7 1.1 2 1.7 3.3 1.7H22"/><path d="m18 14 4 4-4 4"/></svg>
                 <span>Shuffle</span>
@@ -121,26 +140,33 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M20 8h-4"/><path d="M20 12h-6"/><path d="M20 16h-8"/></svg>
                 <span>Sort</span>
               </button>
+              <button class="btn-action" id="bulk-toggle-btn" type="button" title="Toggle bulk text editor">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>Bulk Edit</span>
+              </button>
             </div>
-            <button class="btn-action btn-action-danger" id="clear-btn" type="button" title="Clear all options">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            <button class="btn-action btn-action-danger" id="clear-btn" type="button" title="Clear all choices">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/></svg>
               <span>Clear</span>
             </button>
           </div>
 
-          <div class="textarea-wrapper">
-            <textarea id="options-input" rows="8" placeholder="Type choices here, one per line..." aria-label="Wheel Choices"></textarea>
-            <div class="textarea-footer">
-              <span>One choice per line</span>
-              <span>Max 100 choices</span>
+          <!-- Chips Container -->
+          <div class="option-chips-container" id="option-chips-container" aria-label="Current Wheel Choices"></div>
+
+          <!-- Collapsible Bulk Textarea -->
+          <div class="bulk-editor-wrapper" id="bulk-editor-section" style="display: none;">
+            <div class="bulk-editor-header">
+              <span>Bulk Text Input (1 choice / line)</span>
             </div>
+            <textarea id="options-input" rows="5" placeholder="Paste or type choices here, one per line..." aria-label="Bulk choices editor"></textarea>
           </div>
 
-          <!-- Elimination Toggle -->
+          <!-- Elimination Switch -->
           <div class="panel-switch-row">
             <label class="switch-label" for="remove-on-pick">
               <span class="switch-title">Elimination Mode</span>
-              <span class="switch-desc">Auto-remove winner from wheel after spin</span>
+              <span class="switch-desc">Remove winning slice from wheel after each spin</span>
             </label>
             <label class="toggle-switch">
               <input type="checkbox" id="remove-on-pick">
@@ -148,28 +174,51 @@
             </label>
           </div>
 
-          <!-- Quick Test Chips -->
-          <div class="quick-presets-section">
-            <span class="quick-presets-title">Quick Presets</span>
-            <div class="quick-chips-grid">
-              <button class="chip-btn" type="button" data-options='["Yes","No"]'>⚖️ Yes / No</button>
-              <button class="chip-btn" type="button" data-options='["1","2","3","4","5","6","7","8","9","10"]'>🔢 1 to 10</button>
-              <button class="chip-btn" type="button" data-options='["Heads","Tails"]'>🪙 Coin Flip</button>
-              <button class="chip-btn" type="button" data-options='["Pizza","Burgers","Sushi","Tacos","Pasta","Salad","Ramen","Steak"]'>🍕 Food</button>
-              <button class="chip-btn" type="button" data-options='["A","B","C","D","E","F"]'>🔤 A to F</button>
-            </div>
-          </div>
-
+          <!-- Share Wheel Link -->
           <button class="btn-share-custom" id="share-wheel-btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
-            <span>Share This Custom Wheel</span>
+            <span>Share Custom Wheel Link</span>
           </button>
         </div>
 
+        <!-- Presets Tab View -->
+        <div class="console-body presets-tab-grid" id="view-presets" style="display: none;">
+          <div class="preset-category-group">
+            <span class="preset-category-title">⚡ Quick Deciders</span>
+            <div class="preset-pills-wrap">
+              <button class="preset-pill-item" type="button" data-options='["YES","NO"]'>⚖️ Yes / No</button>
+              <button class="preset-pill-item" type="button" data-options='["YES","NO","MAYBE","SPIN AGAIN"]'>🎯 Yes / No / Maybe</button>
+              <button class="preset-pill-item" type="button" data-options='["Heads","Tails"]'>🪙 Coin Flip</button>
+            </div>
+          </div>
+          <div class="preset-category-group">
+            <span class="preset-category-title">🔢 Numbers &amp; Letters</span>
+            <div class="preset-pills-wrap">
+              <button class="preset-pill-item" type="button" data-options='["1","2","3","4","5","6","7","8","9","10"]'>🔢 Numbers 1-10</button>
+              <button class="preset-pill-item" type="button" data-options='["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"]'>🎲 1 to 20</button>
+              <button class="preset-pill-item" type="button" data-options='["A","B","C","D","E","F"]'>🔤 Letters A-F</button>
+            </div>
+          </div>
+          <div class="preset-category-group">
+            <span class="preset-category-title">🍕 Food &amp; Dining</span>
+            <div class="preset-pills-wrap">
+              <button class="preset-pill-item" type="button" data-options='["Pizza 🍕","Burgers 🍔","Sushi 🍣","Tacos 🌮","Pasta 🍝","Salad 🥗","Ramen 🍜","Steak 🥩"]'>🍕 What to Eat</button>
+              <button class="preset-pill-item" type="button" data-options='["Stir Fry","Tacos","Homemade Pizza","Grilled Salmon","Burgers","Pasta Alfredo","Greek Bowls"]'>🍲 Dinner Ideas</button>
+            </div>
+          </div>
+          <div class="preset-category-group">
+            <span class="preset-category-title">🎉 Party &amp; Social</span>
+            <div class="preset-pills-wrap">
+              <button class="preset-pill-item" type="button" data-options='["Truth 😇","Dare 😈","Truth 😇","Dare 😈","Double Dare 🔥"]'>😈 Truth or Dare</button>
+              <button class="preset-pill-item" type="button" data-options='[" Gift Card","T-Shirt","20% Off","Mystery Gift","Try Again","Grand Prize"]'>🎁 Prize Wheel</button>
+            </div>
+          </div>
+        </div>
+
         <!-- History Tab View -->
-        <div class="panel-body history-view" id="view-history" style="display: none;">
-          <div class="editor-action-bar">
-            <span class="quick-presets-title">Recent Winning Draws</span>
+        <div class="console-body" id="view-history" style="display: none;">
+          <div class="console-action-bar">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Recent Winning Draws</span>
             <button class="btn-action btn-action-danger" id="clear-history-btn" type="button">Clear Log</button>
           </div>
           <div class="history-list" id="history-list"></div>
@@ -189,446 +238,392 @@
         
         <div class="winner-modal-actions">
           <button class="btn-modal-primary" id="modal-spin-again" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
             <span>Spin Again (Space)</span>
           </button>
           <button class="btn-modal-secondary btn-modal-danger" id="modal-remove-spin" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/></svg>
             <span>Remove Winner &amp; Spin</span>
           </button>
           <button class="btn-modal-secondary" id="modal-copy-btn" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             <span>Copy Winner Text</span>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- How It Works Section -->
-    <section class="content-section">
-      <div class="section-header">
-        <span class="section-badge">Simple &amp; Fast</span>
+    <!-- Preset Hub Gallery Section -->
+    <section class="preset-hub-section" id="preset-hub">
+      <div class="section-header-wrap">
+        <span class="section-tag">Scenario Gallery</span>
+        <h2 class="section-title">Pre-built Scenario Wheels</h2>
+        <p class="section-subtitle">Pick from our curated library of decision wheels ready to spin instantly.</p>
+      </div>
+      <div class="category-blocks-grid">
+        
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">⚡</span>
+            <span class="category-block-title">Featured Wheels</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/">
+                <span>Spin the Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/random-picker-wheel">
+                <span>Random Picker Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🍕</span>
+            <span class="category-block-title">Food & Dining</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/what-to-eat-wheel">
+                <span>What to Eat Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/dinner-spinner-wheel">
+                <span>Dinner Spinner Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/lunch-decision-wheel">
+                <span>Lunch Decision Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🎮</span>
+            <span class="category-block-title">Gaming & Esports</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/valorant-agent-picker-wheel">
+                <span>Valorant Agent Picker Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/fortnite-drop-wheel">
+                <span>Fortnite Drop Location Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/roblox-roulette-wheel">
+                <span>Roblox Challenge Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/pokemon-type-wheel">
+                <span>Pokemon Type Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🎓</span>
+            <span class="category-block-title">Classroom & Names</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/wheel-of-names">
+                <span>Wheel of Names</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/random-name-picker">
+                <span>Random Name Picker</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/classroom-random-picker-wheel">
+                <span>Classroom Random Picker Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/group-maker-wheel">
+                <span>Random Group Maker Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/alphabet-letter-wheel">
+                <span>Alphabet Letter Wheel A to Z</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🎉</span>
+            <span class="category-block-title">Party & Social</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/prize-wheel">
+                <span>Prize Wheel Spinner</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/raffle-ticket-wheel">
+                <span>Raffle Ticket Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/giveaway-winner-picker">
+                <span>Giveaway Winner Picker</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/date-night-wheel">
+                <span>Date Night Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/truth-or-dare-wheel">
+                <span>Truth or Dare Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/movie-genre-wheel">
+                <span>Movie Night Picker Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🔢</span>
+            <span class="category-block-title">Numbers & Odds</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/yes-or-no-wheel">
+                <span>Yes or No Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/number-wheel-1-10">
+                <span>Number Wheel 1 to 10</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/number-wheel-1-20">
+                <span>Number Wheel 1 to 20</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/number-wheel-1-100">
+                <span>Number Wheel 1 to 100</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/coin-flip-wheel">
+                <span>Coin Flip Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/d20-dice-roller-wheel">
+                <span>D20 Dice Roller Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/color-picker-wheel">
+                <span>Random Color Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+
+        <div class="category-block">
+          <div class="category-block-header">
+            <span class="category-block-emoji">🌱</span>
+            <span class="category-block-title">Habits & Fitness</span>
+          </div>
+          <ul class="category-links-list">
+            
+            <li>
+              <a class="preset-link-card" href="/workout-exercise-wheel">
+                <span>Workout Exercise Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/daily-habit-challenge-wheel">
+                <span>Daily Habit Challenge Wheel</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+            <li>
+              <a class="preset-link-card" href="/chore-wheel-for-kids">
+                <span>Chore Wheel for Kids & Roommates</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Editorial Band: How to Use & Features -->
+    <section class="editorial-band">
+      <div class="section-header-wrap">
+        <span class="section-tag">Engineered for Trust</span>
         <h2 class="section-title">How It Works in 4 Steps</h2>
         <p class="section-subtitle">Zero signup, instant setup, and mathematically fair random outcomes.</p>
       </div>
       <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-number">01</span>
-          <h3>Input Your Choices</h3>
-          <p>Type, paste, or pick a preset list of options into the editor box.</p>
+        <div class="step-item">
+          <span class="step-num">Step 01</span>
+          <h3 class="step-title">Input Choices</h3>
+          <p class="step-desc">Type, paste, or pick preset options into the editor panel.</p>
         </div>
-        <div class="step-card">
-          <span class="step-number">02</span>
-          <h3>Customize Wheel</h3>
-          <p>Select your favorite color theme, spin duration, and elimination rules.</p>
+        <div class="step-item">
+          <span class="step-num">Step 02</span>
+          <h3 class="step-title">Customize</h3>
+          <p class="step-desc">Select speed, color theme, and elimination rules.</p>
         </div>
-        <div class="step-card">
-          <span class="step-number">03</span>
-          <h3>Hit Spin</h3>
-          <p>Click the wheel or press Spacebar to start the animated physics spin.</p>
+        <div class="step-item">
+          <span class="step-num">Step 03</span>
+          <h3 class="step-title">Hit Spin</h3>
+          <p class="step-desc">Click the wheel or press Spacebar for animated physics spin.</p>
         </div>
-        <div class="step-card">
-          <span class="step-number">04</span>
-          <h3>Celebrate &amp; Share</h3>
-          <p>Get instant confetti celebrations, copy results, or share your custom wheel.</p>
+        <div class="step-item">
+          <span class="step-num">Step 04</span>
+          <h3 class="step-title">Celebrate</h3>
+          <p class="step-desc">Get instant sound fanfare, confetti, and shareable results.</p>
         </div>
       </div>
-    </section>
 
-    <!-- Why Choose Our RNG Studio -->
-    <section class="content-section">
-      <div class="section-header">
-        <span class="section-badge">Engineered for Trust</span>
-        <h2 class="section-title">Why Users Trust SpinTheWheel.buzz</h2>
-        <p class="section-subtitle">Built with modern web standards, zero tracking, and pure cryptographic fairness.</p>
-      </div>
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-item">
           <div class="feature-icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>100% Cryptographic Fairness</h3>
-          <p>Uses Web Crypto CSPRNG (<code>crypto.getRandomValues</code>) ensuring every slice has an unbiased, mathematically equal chance.</p>
+          <h3 class="feature-item-title">100% Cryptographic Fairness</h3>
+          <p class="feature-item-desc">Uses Web Crypto CSPRNG (<code>crypto.getRandomValues</code>) ensuring every slice has an unbiased, mathematically equal chance.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-item">
           <div class="feature-icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3>Total Client-Side Privacy</h3>
-          <p>Your custom choices, student rosters, and contest names are saved only in your private browser storage. Zero server uploads.</p>
+          <h3 class="feature-item-title">Total Client Privacy</h3>
+          <p class="feature-item-desc">Your custom choices, student rosters, and contest names are saved only in your private browser storage. Zero server uploads.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-item">
           <div class="feature-icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
           </div>
-          <h3>Procedural Audio &amp; Confetti</h3>
-          <p>Synthesizes real-time mechanical tick audio as pins collide and fires high-fps celebratory confetti bursts on winning draws.</p>
+          <h3 class="feature-item-title">Synthetic Audio &amp; Confetti</h3>
+          <p class="feature-item-desc">Synthesizes real-time mechanical tick audio as pins collide and fires high-fps celebratory confetti bursts on winning draws.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-item">
           <div class="feature-icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
           </div>
-          <h3>Smartboard &amp; Stream Ready</h3>
-          <p>Fluid 1-click Fullscreen mode perfect for classroom smart projectors, Zoom screen shares, and Twitch/YouTube live streams.</p>
+          <h3 class="feature-item-title">Smartboard &amp; Stream Ready</h3>
+          <p class="feature-item-desc">Fluid 1-click Fullscreen mode perfect for classroom smart projectors, Zoom screen shares, and Twitch/YouTube live streams.</p>
         </div>
       </div>
     </section>
 
-    <!-- Preset Hub Gallery -->
-    <section class="content-section" id="preset-hub">
-      <div class="section-header">
-        <span class="section-badge">Explore All Hubs</span>
-        <h2 class="section-title">Pre-built Scenario Wheels</h2>
-        <p class="section-subtitle">Choose from our curated collection of decision spinners ready to spin instantly.</p>
-      </div>
-      <div class="gallery-grid">
-        
-        <a class="gallery-card" href="/">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">⚡</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Spin the Wheel</h3>
-          <p>Enter choices, spin the wheel, and make 100% fair random decisions in seconds. No signup required.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/wheel-of-names">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎓</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Wheel of Names</h3>
-          <p>Enter student or participant names, spin the wheel, and pick a random person fairly.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/random-name-picker">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">👥</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Random Name Picker</h3>
-          <p>Quickly draw names from a list for giveaways, group projects, and team duties.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/yes-or-no-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">⚖️</span>
-            <span class="gallery-card-count">6 presets</span>
-          </div>
-          <h3>Yes or No Wheel</h3>
-          <p>Stuck in analysis paralysis? Spin the wheel for a fast, random Yes, No, or Maybe answer.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/random-picker-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎯</span>
-            <span class="gallery-card-count">6 presets</span>
-          </div>
-          <h3>Random Picker Wheel</h3>
-          <p>Customize your list of options and let chance choose the winning outcome.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/prize-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎁</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Prize Wheel Spinner</h3>
-          <p>Spin to award discounts, mystery gifts, and jackpot prizes for streams and live events.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/what-to-eat-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🍕</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>What to Eat Wheel</h3>
-          <p>Can't decide what to eat? Spin the food wheel for an instant breakfast, lunch, or dinner pick.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/dinner-spinner-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🍲</span>
-            <span class="gallery-card-count">9 presets</span>
-          </div>
-          <h3>Dinner Spinner Wheel</h3>
-          <p>Spin the wheel to solve the eternal 'What's for dinner tonight?' question instantly.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/lunch-decision-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🥪</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Lunch Decision Wheel</h3>
-          <p>Fast, random lunch picker for busy workdays, school breaks, and quick takeout.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/valorant-agent-picker-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎯</span>
-            <span class="gallery-card-count">22 presets</span>
-          </div>
-          <h3>Valorant Agent Picker Wheel</h3>
-          <p>Spin the wheel for an unranked challenge or spontaneous agent selection in Valorant.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/fortnite-drop-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🪂</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Fortnite Drop Location Wheel</h3>
-          <p>Let the wheel pick your next hot drop or safe loot location in Fortnite Battle Royale.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/roblox-roulette-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎮</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Roblox Challenge Wheel</h3>
-          <p>Spin to pick which Roblox experience, obby, or challenge to play next with friends.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/pokemon-type-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">⚡</span>
-            <span class="gallery-card-count">18 presets</span>
-          </div>
-          <h3>Pokemon Type Wheel</h3>
-          <p>Spin to pick a random Pokemon type for Monotype runs, Nuzlockes, and team drafts.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/classroom-random-picker-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎓</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Classroom Random Picker Wheel</h3>
-          <p>Engage students and call on participants 100% fairly on your interactive smartboard.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/group-maker-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">👥</span>
-            <span class="gallery-card-count">6 presets</span>
-          </div>
-          <h3>Random Group Maker Wheel</h3>
-          <p>Split players, students, and colleagues into fair, balanced teams with a quick spin.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/alphabet-letter-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🔤</span>
-            <span class="gallery-card-count">26 presets</span>
-          </div>
-          <h3>Alphabet Letter Wheel A to Z</h3>
-          <p>Spin to pick a random letter from A to Z for vocabulary games, Scattergories, and phonics.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/date-night-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">❤️</span>
-            <span class="gallery-card-count">9 presets</span>
-          </div>
-          <h3>Date Night Wheel</h3>
-          <p>Spice up your evenings with fun, romantic, and adventurous date night ideas.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/truth-or-dare-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎉</span>
-            <span class="gallery-card-count">7 presets</span>
-          </div>
-          <h3>Truth or Dare Wheel</h3>
-          <p>Spin the wheel for an unpredictable Truth or Dare party game with friends.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/raffle-ticket-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎟️</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Raffle Ticket Winner Wheel</h3>
-          <p>Draw raffle ticket winners visibly and transparently on stage, stream, or in front of your audience.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/giveaway-winner-picker">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎁</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Giveaway Winner Picker Wheel</h3>
-          <p>Pick Instagram, YouTube, and Discord giveaway winners live on camera with zero disputes.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/movie-genre-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎬</span>
-            <span class="gallery-card-count">9 presets</span>
-          </div>
-          <h3>Movie Night Wheel</h3>
-          <p>Can't agree on Netflix, Hulu, or HBO? Spin the wheel to lock in your movie genre.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/number-wheel-1-10">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🔢</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Number Wheel 1 to 10</h3>
-          <p>Pick a truly random number between 1 and 10 with fair probability.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/number-wheel-1-20">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🔢</span>
-            <span class="gallery-card-count">20 presets</span>
-          </div>
-          <h3>Number Wheel 1 to 20</h3>
-          <p>Spin a 20-segment wheel for classroom exercises, tabletop RPGs, and prize draws.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/number-wheel-1-100">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">💯</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Number Wheel 1 to 100</h3>
-          <p>Pick random tens, ranges, or lottery numbers from 1 to 100 with zero bias.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/coin-flip-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🪙</span>
-            <span class="gallery-card-count">6 presets</span>
-          </div>
-          <h3>Coin Flip Wheel</h3>
-          <p>When you don't have a coin in your pocket, spin the 50/50 wheel for Heads or Tails.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/d20-dice-roller-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎲</span>
-            <span class="gallery-card-count">20 presets</span>
-          </div>
-          <h3>D20 Dice Roller Wheel</h3>
-          <p>Spin a virtual D20 with natural 20 critical hits and natural 1 fumbles for your D&D campaign.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/color-picker-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🎨</span>
-            <span class="gallery-card-count">10 presets</span>
-          </div>
-          <h3>Random Color Wheel</h3>
-          <p>Spin to pick vibrant random colors for art challenges, drawing games, and design prompts.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/workout-exercise-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">💪</span>
-            <span class="gallery-card-count">9 presets</span>
-          </div>
-          <h3>Workout Exercise Wheel</h3>
-          <p>Spin the fitness wheel for random bodyweight exercises, HIIT sets, and gym circuits.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/daily-habit-challenge-wheel">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🌱</span>
-            <span class="gallery-card-count">9 presets</span>
-          </div>
-          <h3>Daily Habit Challenge Wheel</h3>
-          <p>Spin every morning for a positive micro-habit to boost focus, energy, and mindfulness.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-
-        <a class="gallery-card" href="/chore-wheel-for-kids">
-          <div class="gallery-card-top">
-            <span class="gallery-card-emoji">🧹</span>
-            <span class="gallery-card-count">8 presets</span>
-          </div>
-          <h3>Chore Wheel for Kids & Roommates</h3>
-          <p>Make cleaning fair and fun. Spin to assign household chores without bickering.</p>
-          <span class="gallery-card-cta">Spin Wheel &rarr;</span>
-        </a>
-        
-      </div>
-    </section>
-
-    <!-- FAQs Section -->
-    <section class="content-section">
-      <div class="section-header">
-        <span class="section-badge">Got Questions?</span>
+    <!-- FAQ Accordion -->
+    <section class="editorial-band">
+      <div class="section-header-wrap">
+        <span class="section-tag">Got Questions?</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
-      <div class="faq-accordion">
+      <div class="faq-list">
         
-        <details class="faq-item">
-          <summary>
-            <span>Is the Yes or No result truly unbiased?</span>
-            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="faq-content">
+        <details class="faq-card">
+          <summary>Is the Yes or No result truly unbiased?</summary>
+          <div class="faq-body">
             <p>Yes, every slice has identical arc width and mathematical probability.</p>
           </div>
         </details>
@@ -637,27 +632,20 @@
     </section>
   </main>
 
-  <!-- Modern Dark Footer -->
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="brand">
-        <div class="brand-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <span class="brand-name">Spin the Wheel</span>
-      </div>
-      <nav class="footer-nav" aria-label="Footer Navigation">
+      <div>&copy; 2026 SpinTheWheel.buzz &bull; Free Cryptographic Decision Wheel Studio</div>
+      <div class="footer-links">
         <a href="/">Home</a>
-        <a href="/wheel-of-names">Wheel of Names</a>
-        <a href="/yes-or-no-wheel">Yes or No</a>
-        <a href="/what-to-eat-wheel">What to Eat</a>
+        <a href="/wheel-of-names">Names</a>
+        <a href="/yes-or-no-wheel">Yes/No</a>
+        <a href="/what-to-eat-wheel">Food</a>
         <a href="/about">About</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
         <a href="/sitemap.xml">Sitemap</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 SpinTheWheel.buzz. Free Cryptographic Decision Wheel Studio. All rights reserved.</p>
-      <p class="footer-desc">Spin the Wheel is a free, high-performance random picker and decision maker. Fast, fair, privacy-first, and zero signup required.</p>
+      </div>
     </div>
   </footer>
 

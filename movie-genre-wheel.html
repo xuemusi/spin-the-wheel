@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Night Wheel — Random What to Watch Spinner</title>
+  <meta name="description" content="Free Movie Night Wheel. Stop spending 45 minutes browsing streaming catalogs — let the wheel pick your movie genre.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Movie Night Wheel — Random What to Watch Spinner">
+  <meta property="og:description" content="Free Movie Night Wheel. Stop spending 45 minutes browsing streaming catalogs — let the wheel pick your movie genre.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://spin-the-wheel-axn.pages.dev/movie-genre-wheel">
+  <meta property="og:url" content="https://spin-the-wheel-axn.pages.dev/movie-genre-wheel">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Movie Night Wheel", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free Movie Night Wheel. Stop spending 45 minutes browsing streaming catalogs \u2014 let the wheel pick your movie genre."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I replace genres with movie titles?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Copy your watchlist titles into the box and spin for the exact movie to play."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="Spin the Wheel">Spin the Wheel</a>
+    <nav aria-label="Utility navigation">
+      <a href="/">All Wheels</a>
+      <a href="/wheel-of-names">Names</a>
+      <a href="/yes-or-no-wheel">Yes/No</a>
+      <a href="/what-to-eat-wheel">Food</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-section" id="tool">
+      <div class="wheel-container">
+        <span class="hero-eyebrow">🎬 Movies & Streaming</span>
+        <h1 class="hero-title">Movie Night Wheel</h1>
+        <p class="hero-subtitle">Can't agree on Netflix, Hulu, or HBO? Spin the wheel to lock in your movie genre.</p>
+        <div class="wheel-wrapper">
+          <canvas id="wheel-canvas" aria-label="Movie Night Wheel. Click to spin." role="img"></canvas>
+        </div>
+        <div class="wheel-result" id="result-display" aria-live="polite"></div>
+      </div>
+
+      <div class="controls-panel">
+        <div class="panel-header">
+          <h2>Wheel Options</h2>
+          <span class="option-count" id="option-count">9 options</span>
+        </div>
+        <textarea id="options-input" class="options-textarea" rows="8" placeholder="Enter options, one per line..." aria-label="Wheel options, one per line"></textarea>
+        <div class="panel-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remove-on-pick">
+            <span>Remove winner after spin</span>
+          </label>
+        </div>
+        <div class="input-buttons">
+          <button class="btn btn-primary" id="spin-btn" type="button">Spin the Wheel</button>
+          <button class="btn btn-icon" id="shuffle-btn" type="button" title="Shuffle" aria-label="Shuffle options">🔀</button>
+          <button class="btn btn-text" id="clear-btn" type="button">Clear</button>
+        </div>
+        <div style="margin-top: 12px; display: flex; gap: 8px;">
+          <button class="btn btn-secondary btn-sm" id="share-wheel-btn" type="button" style="width: 100%;">🔗 Share This Custom Wheel</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>End Streaming Paralysis</h2>
+      <p>Spend less time scrolling thumbnails and more time enjoying movie night with friends.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Use the Movie Night Wheel</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Review or Edit</h3><p>Customize the pre-loaded items in the box or keep the default selections.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Click Spin</h3><p>Hit the large Spin button or click directly on the colorful wheel canvas.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Instant Winner</h3><p>Watch the wheel decelerate smoothly to reveal your fair, cryptographic result.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Share or Re-spin</h3><p>Copy your unique wheel URL to challenge friends or spin again.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Explore Related Wheels</h2>
+      <div class="internal-links">
+        <a class="link-card" href="/what-to-eat-wheel">What to Eat Wheel →</a>
+<a class="link-card" href="/dinner-spinner-wheel">Dinner Spinner Wheel →</a>
+<a class="link-card" href="/lunch-decision-wheel">Lunch Decision Wheel →</a>
+<a class="link-card" href="/date-night-wheel">Date Night Wheel →</a>
+<a class="link-card" href="/truth-or-dare-wheel">Truth or Dare Wheel →</a>
+<a class="link-card" href="/classroom-random-picker-wheel">Classroom Random Picker Wheel →</a>
+
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I replace genres with movie titles?</summary><p>Yes! Copy your watchlist titles into the box and spin for the exact movie to play.</p></details>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </nav>
+    <p>&copy; 2026 Spin the Wheel. All rights reserved.</p>
+    <p class="footer-desc">Movie Night Wheel — Free instant decision maker. Fast, fair, and fun.</p>
+  </footer>
+
+  <script type="module">
+    import { initWheelPage } from '/app.mjs';
+    const defaultOpts = ["Sci-Fi Thriller", "Feel-Good Comedy", "Action-Packed Blockbuster", "Psychological Horror", "Romantic Comedy", "Award-Winning Drama", "True Crime Documentary", "Classic 90s Nostalgia", "Animated Pixar / Anime"];
+    const wheel = initWheelPage({
+      mode: 'movie',
+      defaultOptions: defaultOpts,
+      storageKey: 'stw-movie-picker',
+      pageName: 'Movie Night Wheel'
+    });
+
+    // Share handler
+    document.getElementById('share-wheel-btn')?.addEventListener('click', () => {
+      const opts = wheel.options || defaultOpts;
+      const url = new URL(window.location.href);
+      url.searchParams.set('choices', opts.join(','));
+      navigator.clipboard.writeText(url.toString()).then(() => {
+        const btn = document.getElementById('share-wheel-btn');
+        const orig = btn.textContent;
+        btn.textContent = '✅ Link Copied to Clipboard!';
+        setTimeout(() => btn.textContent = orig, 2500);
+      }).catch(() => {
+        alert('Share URL: ' + url.toString());
+      });
+    });
+  </script>
+</body>
+</html>

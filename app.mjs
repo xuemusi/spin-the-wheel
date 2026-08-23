@@ -304,14 +304,24 @@ export function initWheelPage(config) {
   const counterEl = document.getElementById('option-count');
   const removeCheck = document.getElementById('remove-on-pick');
 
-  // Load saved options
-  let savedOptions = [];
+  // Load URL query param choices or saved options
+  let initialOptions = [];
   try {
-    const stored = localStorage.getItem(storageKey || 'stw-options');
-    if (stored) savedOptions = JSON.parse(stored);
+    const params = new URLSearchParams(window.location.search);
+    const paramChoices = params.get("choices") || params.get("options");
+    if (paramChoices) {
+      initialOptions = paramChoices.split(",").map(s => decodeURIComponent(s).trim()).filter(s => s.length > 0);
+    }
   } catch (e) {}
 
-  const initialOptions = savedOptions.length > 0 ? savedOptions : (defaultOptions || []);
+  if (initialOptions.length === 0) {
+    let savedOptions = [];
+    try {
+      const stored = localStorage.getItem(storageKey || "stw-options");
+      if (stored) savedOptions = JSON.parse(stored);
+    } catch (e) {}
+    initialOptions = savedOptions.length > 0 ? savedOptions : (defaultOptions || []);
+  }
 
   // Set up wheel
   const wheel = new SpinWheel(canvas, {

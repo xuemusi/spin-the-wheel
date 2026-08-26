@@ -1,0 +1,49 @@
+# Spin the Wheel — Free Online Random Picker & Decision Maker
+> Spin the Wheel (https://spinthewheel.buzz) is a fast, 100% free, browser-based wheel spinner and random decision maker. It requires no login, features zero ads/popups, and uses cryptographically secure random number generation.
+
+## Summary & Core Value
+Spin the Wheel solves decision fatigue and provides fair, unbiased randomness for classrooms, online giveaways, family game nights, team meetings, and everyday choices (like "What to eat" or "Yes or No").
+
+- **Primary URL**: https://spinthewheel.buzz/
+- **Pricing**: 100% Free forever, no sign-up or software installation required.
+- **Fairness & Algorithm**: Powered by the browser's cryptographic `crypto.getRandomValues()` API to ensure strictly uniform probability distributions across all slices.
+
+## Key Features
+- **Customizable Wheel Segments**: Add, edit, remove, and color-code unlimited wheel choices.
+- **Winner Elimination Mode**: Option to automatically remove chosen options after each spin to prevent duplicate selections.
+- **Sound Effects & Confetti**: Interactive audio effects and celebratory animations.
+- **Shareable Links**: Export custom wheel setups into shareable direct URLs.
+- **Mobile & Classroom Ready**: Fully responsive design supporting touch gestures on iOS, Android, tablets, and interactive smartboards.
+
+## 24 Dedicated Decision Hubs & Tools
+- [Wheel of Names](https://spinthewheel.buzz/wheel-of-names) — Classroom student picker & raffle winner generator.
+- [Random Name Picker](https://spinthewheel.buzz/random-name-picker) — Fair giveaway name selector.
+- [Yes or No Wheel](https://spinthewheel.buzz/yes-or-no-wheel) — Instant 50/50 binary decision maker.
+- [What to Eat Wheel](https://spinthewheel.buzz/what-to-eat-wheel) — Meal and takeout selector.
+- [Dinner Spinner Wheel](https://spinthewheel.buzz/dinner-spinner-wheel) — Dinner menu chooser for couples and families.
+- [Lunch Decision Wheel](https://spinthewheel.buzz/lunch-decision-wheel) — Quick workday lunch picker.
+- [Number Wheel 1-10](https://spinthewheel.buzz/number-wheel-1-10) — Single digit randomizer.
+- [Number Wheel 1-20](https://spinthewheel.buzz/number-wheel-1-20) — Board game and tabletop random number generator.
+- [Number Wheel 1-100](https://spinthewheel.buzz/number-wheel-1-100) — Percentile and large range selector.
+- [Prize Wheel](https://spinthewheel.buzz/prize-wheel) — Event & corporate giveaway prize spinner.
+- [Giveaway Winner Picker](https://spinthewheel.buzz/giveaway-winner-picker) — Social media raffle selection tool.
+- [Raffle Ticket Wheel](https://spinthewheel.buzz/raffle-ticket-wheel) — Numerical ticket drawing tool.
+- [Classroom Random Picker](https://spinthewheel.buzz/classroom-random-picker-wheel) — Teacher tool for student participation.
+- [Group Maker Wheel](https://spinthewheel.buzz/group-maker-wheel) — Random team and study group organizer.
+- [Truth or Dare Wheel](https://spinthewheel.buzz/truth-or-dare-wheel) — Party game spinner.
+- [Coin Flip Wheel](https://spinthewheel.buzz/coin-flip-wheel) — Heads or tails simulator with visual physics.
+- [Color Picker Wheel](https://spinthewheel.buzz/color-picker-wheel) — Random color and artist palette picker.
+- [D20 Dice Roller Wheel](https://spinthewheel.buzz/d20-dice-roller-wheel) — RPG and D&D dice alternative.
+- [Date Night Wheel](https://spinthewheel.buzz/date-night-wheel) — Couple activities and date idea selector.
+- [Daily Habit Challenge](https://spinthewheel.buzz/daily-habit-challenge-wheel) — Habit building and micro-challenge spinner.
+- [Workout Exercise Wheel](https://spinthewheel.buzz/workout-exercise-wheel) — HIIT and fitness routine generator.
+- [Fortnite Drop Wheel](https://spinthewheel.buzz/fortnite-drop-wheel) — Battle royale drop location selector.
+- [Roblox Roulette Wheel](https://spinthewheel.buzz/roblox-roulette-wheel) — Mini-game selection spinner.
+- [Valorant Agent Picker](https://spinthewheel.buzz/valorant-agent-picker-wheel) — Random agent selector for competitive play.
+
+## Site Structure & Endpoints
+- [Home Studio](https://spinthewheel.buzz/): Full-featured interactive wheel studio.
+- [About](https://spinthewheel.buzz/about): Site mission and fairness commitment.
+- [Privacy Policy](https://spinthewheel.buzz/privacy): Zero data collection policy.
+- [Terms of Service](https://spinthewheel.buzz/terms): Acceptable usage guidelines.
+- [Sitemap](https://spinthewheel.buzz/sitemap.xml): XML sitemap containing all 33 indexed URLs.

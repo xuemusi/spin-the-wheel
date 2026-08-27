@@ -1,3 +1,13 @@
+// ShipSolo Analytics Custom Event Tracker (Plausible Integration)
+export function trackEvent(name, props = {}) {
+  try {
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };
+    if (typeof window.plausible === 'function') {
+      window.plausible(name, { props });
+    }
+  } catch (e) {}
+}
+
 // Spin the Wheel — Master Studio Engine
 // Retina Canvas Wheel, 3D Brushed Metallic Bezel, Specular Studs, Spring Physics Flapper, Web Audio & Multi-shape Confetti
 
@@ -739,13 +749,29 @@ export function initWheelPage(config) {
 
   const confetti = confettiCanvas ? new ConfettiEngine(confettiCanvas) : null;
 
-  // Load URL query param choices or saved options
+  // Load URL query param / hash choices or saved options
   let initialOptions = [];
   try {
-    const params = new URLSearchParams(window.location.search);
-    const paramChoices = params.get('choices') || params.get('options');
+    const searchParams = new URLSearchParams(window.location.search);
+    const hashStr = window.location.hash.startsWith('#') ? window.location.hash.slice(1) : '';
+    const hashParams = new URLSearchParams(hashStr);
+
+    const paramChoices = searchParams.get('choices') || searchParams.get('options') || hashParams.get('choices') || hashParams.get('options');
+    const paramTitle = searchParams.get('title') || hashParams.get('title');
+
     if (paramChoices) {
-      initialOptions = paramChoices.split(',').map(s => decodeURIComponent(s).trim()).filter(s => s.length > 0);
+      initialOptions = paramChoices.split(',').map(s => {
+        try { return decodeURIComponent(s).trim(); } catch (e) { return s.trim(); }
+      }).filter(s => s.length > 0);
+    }
+
+    if (paramTitle) {
+      const decodedTitle = decodeURIComponent(paramTitle).trim();
+      if (decodedTitle) {
+        document.title = decodedTitle + " — Spin the Wheel";
+        const heroH1 = document.querySelector('.hero-title-main');
+        if (heroH1) heroH1.textContent = decodedTitle;
+      }
     }
   } catch (e) {}
 
@@ -797,6 +823,13 @@ export function initWheelPage(config) {
       } catch (e) {}
       renderHistory();
 
+      // Track ShipSolo Goal Conversion
+      trackEvent('spin_completed', {
+        winner,
+        count: wheel.options.length,
+        palette: wheel.palette
+      });
+
       // Confetti Blast
       if (confetti) confetti.blast();
 
@@ -807,6 +840,7 @@ export function initWheelPage(config) {
         wheel.setOptions(opts);
         syncOptionsToUI(opts);
         saveOptions(opts);
+        trackEvent('winner_removed', { winner, trigger: 'auto_remove_toggle' });
       }
 
       // Open Celebration Modal
@@ -1047,6 +1081,8 @@ export function initWheelPage(config) {
       try {
         const raw = item.getAttribute('data-options');
         const opts = JSON.parse(raw);
+        const presetName = item.querySelector('.preset-pill-title')?.textContent?.trim() || item.textContent.trim();
+        trackEvent('preset_loaded', { preset: presetName, count: opts.length });
         wheel.setOptions(opts);
         syncOptionsToUI(opts);
         saveOptions(opts);
@@ -1147,6 +1183,8 @@ export function initWheelPage(config) {
   if (modalRemoveSpinBtn) {
     modalRemoveSpinBtn.addEventListener('click', () => {
       const idx = winnerModal._lastIndex;
+      const winner = winnerTitle?.textContent || '';
+      trackEvent('winner_removed', { winner, trigger: 'modal_remove_button' });
       if (idx !== undefined && idx >= 0) {
         const opts = [...wheel.options];
         opts.splice(idx, 1);

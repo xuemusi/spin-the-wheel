@@ -59,6 +59,7 @@ Where $\omega_0$ is the initial angular velocity ($15\pi \text{ to } 25\pi \text
 
 ## 4. Key Endpoints & Technical Directory
 - **Home Studio**: https://spinthewheel.buzz/ — Interactive customization studio with sound effects, confetti, and slice weighting.
+- **SpinTheWheel vs Wheel of Names**: https://spinthewheel.buzz/vs/wheelofnames — Cryptographic CSPRNG fairness, ad-free classroom experience, and COPPA client-side privacy comparison.
 - **About**: https://spinthewheel.buzz/about — Mathematical specifications and fairness verification.
 - **Privacy Policy**: https://spinthewheel.buzz/privacy — Zero-cookie, local-first client storage model.
 - **Sitemap**: https://spinthewheel.buzz/sitemap.xml — Complete machine-readable XML index.

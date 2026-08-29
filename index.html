@@ -17,8 +17,80 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Spin the Wheel", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free spin the wheel tool online. Enter custom options, spin the wheel, and pick a random winner instantly. Features sound, confetti, and presets."}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the spin the wheel really random and fair?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We use your browser's cryptographic random number generator (crypto.getRandomValues) to ensure every slice has mathematically equal probability."}}, {"@type": "Question", "name": "Do I need to sign up or create an account?", "acceptedAnswer": {"@type": "Answer", "text": "No! Spin the Wheel is 100% free with zero signup, zero ads popups, and no software download required."}}, {"@type": "Question", "name": "Can I eliminate options after they are chosen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Turn on the 'Remove winner after pick' toggle or click 'Remove & Spin' in the winner celebration popup."}}, {"@type": "Question", "name": "Can I share my custom wheel with friends or students?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Click the 'Share Custom Wheel' button to copy a direct link pre-loaded with all your custom choices."}}, {"@type": "Question", "name": "Does this work on mobile and smart interactive whiteboards?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. It is fully responsive on iPhone, Android, iPads, desktop PCs, and large classroom projector displays."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://spinthewheel.buzz/#app",
+        "name": "Spin the Wheel",
+        "url": "https://spinthewheel.buzz/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Free cryptographic random decision wheel and name picker with zero ads, CSPRNG hardware entropy, and 100% client-side privacy.",
+        "featureList": [
+          "Web Crypto API (crypto.getRandomValues) CSPRNG True Randomness",
+          "100% Ad-Free Clean Interface for Classrooms & Streams",
+          "Zero Data Retention & LocalStorage Privacy Protection",
+          "60 FPS Canvas Physics Engine with Damping Dynamics",
+          "20+ Instant Scenario Wheel Presets",
+          "Instant URL Encoding Custom Wheel Sharing"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the spin the wheel really random and fair?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Spin the Wheel uses your browser's Web Crypto API cryptographic random number generator (crypto.getRandomValues) connected to the system entropy pool, ensuring every slice has an unbiased, mathematically equal probability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to sign up or create an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No! Spin the Wheel is 100% free with zero signup, zero ad popups, and no software download required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I eliminate options after they are chosen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Turn on the 'Remove winner after pick' toggle or click 'Remove & Spin' in the winner celebration popup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I share my custom wheel with friends or students?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Click the 'Share Custom Wheel' button to copy a direct link pre-loaded with all your custom choices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this work on mobile and smart interactive whiteboards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. It is fully responsive on iPhone, Android, iPads, desktop PCs, and large classroom projector displays."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <!-- Privacy-friendly analytics by Plausible (ShipSolo) -->
   <script defer data-domain="spinthewheel.buzz" src="https://plausible.shipsolo.io/js/script.js"></script>
 </head>
@@ -39,6 +111,7 @@
       <a href="/wheel-of-names" >Names</a>
       <a href="/yes-or-no-wheel" >Yes/No</a>
       <a href="/what-to-eat-wheel" >Food</a>
+      <a href="/vs/wheelofnames">vs Wheel of Names</a>
       <a href="#preset-hub">Presets</a>
     </nav>
   </header>
@@ -49,6 +122,17 @@
       <span class="hero-badge">⚡ Free Online Studio</span>
       <h1 class="hero-title">Spin the Wheel</h1>
       <p class="hero-subtitle">Enter choices, spin the wheel, and make 100% fair random decisions in seconds. No signup required.</p>
+
+      <!-- AEO Direct-Answer Quick Summary Card -->
+      <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid var(--brand-border); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; max-width: 860px; margin: 1.5rem auto 0; text-align: left; box-shadow: var(--shadow-sm);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: #818cf8; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Quick Summary (AEO Direct Answer)
+        </div>
+        <p style="color: var(--text-main); font-size: 0.92rem; line-height: 1.6; margin: 0;">
+          <strong>Spin the Wheel</strong> (spinthewheel.buzz) is a free, ad-free online decision wheel powered by the <strong>Web Crypto API (CSPRNG)</strong>. It provides mathematically unbiased random outcomes, 100% client-side privacy (COPPA/FERPA safe), 20+ scenario presets, 60fps canvas physics, and instant URL sharing with zero registration or downloads.
+        </p>
+      </div>
     </section>
 
     <!-- Main Interactive Studio Stage -->
@@ -683,6 +767,7 @@
         <a href="/wheel-of-names">Names</a>
         <a href="/yes-or-no-wheel">Yes/No</a>
         <a href="/what-to-eat-wheel">Food</a>
+        <a href="/vs/wheelofnames">vs Wheel of Names</a>
         <a href="/about">About</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
